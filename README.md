@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 - [Intro to App](#intro-to-app)
 - [Tech Stack](#tech-stack)
-- [ReatJS Scripts](#availabe-scripts)
+- [ReatJS Scripts](#available-scripts)
 - [Learn More of ReatJS](#learn-more)
 
 ## Intro to App
