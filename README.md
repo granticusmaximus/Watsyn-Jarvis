@@ -1,8 +1,27 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Reference List:
-[ReatJS Scripts](#availabe-scripts)
-[Learn More of ReatJS](#learn-more)
+## Contents:
+
+- [Intro to App](#intro-to-app)
+- [Tech Stack](#tech-stack)
+- [ReatJS Scripts](#availabe-scripts)
+- [Learn More of ReatJS](#learn-more)
+
+## Intro to App
+_More to come in this section as requirements are filled out._
+
+## Tech Stack
+
+### Major Technologies Used:
+
+- ReactJS
+- Firebase
+
+### Node Packages Used:
+
+- React Router
+- Reactstrap
+- Prop Types
 
 ## Available Scripts
 
