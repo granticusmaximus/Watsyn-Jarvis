@@ -1,10 +1,11 @@
 import "../../assets/css/App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import Profile from "../user/UserProfile";
-import Messages from "../user/UserMessages";
-import Friends from "../user/UserFriends";
 import Home from "../Home";
+import Contact from "../Contact/Contact";
+import { Button } from 'reactstrap';
+import Notes from "../Notes/Notes";
+import List from "../ToDo/List";
 
 const Navigation = () => (
     <Router>
@@ -14,31 +15,31 @@ const Navigation = () => (
                     <div className="header">Menu</div>
                     <li>
                         <Link to={"/index"} className="nav-link">
-                            Home
+                            <Button outline color="warning">Home</Button>
                         </Link>
                     </li>
                     <li>
-                        <Link to={"/user/profile"} className="nav-link">
-                            Profile
+                        <Link to={"/contact"} className="nav-link">
+                            <Button outline color="warning">Contact</Button>
                         </Link>
                     </li>
                     <li>
-                        <Link to={"/user/messages"} className="nav-link">
-                            Messages
+                        <Link to={"/notes"} className="nav-link">
+                            <Button outline color="warning">Notes</Button>
                         </Link>
                     </li>
                     <li>
-                        <Link to={"/user/friends"} className="nav-link">
-                            Friends
+                        <Link to={"/todo"} className="nav-link">
+                            <Button outline color="warning">ToDo</Button>
                         </Link>
                     </li>
                 </ul>
             </div>
             <Switch>
                 <Route exact path="/index" component={Home} />
-                <Route exact path="/user/profile" component={Profile} />
-                <Route exact path="/user/messages" component={Messages} />
-                <Route exact path="/user/friends" component={Friends} />
+                <Route exact path="/contact" component={Contact} />
+                <Route exact path="/notes" component={Notes} />
+                <Route exact path="/todo" component={List} />\
             </Switch>
         </div>
     </Router>

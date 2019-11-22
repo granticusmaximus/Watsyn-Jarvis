@@ -36,10 +36,14 @@ body {
   bottom: 0;
 }
 
+.btn {
+  min-width: 100px;
+}
+
 .bgf {
   background-color: #2487de;
   color: white;
-  width: 250px;
+  width: auto;
   height: auto;
   -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
@@ -289,5 +293,46 @@ footer ul li a:hover {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.to-do-list-container {
+  margin-top: 25px;
+}
+.to-do-list-item {
+  margin-top: 10px;
+  color: white;
+  transition: background-color 1s;
+}
+
+.to-do-list-item h4 {
+  padding-left: 25px;
+  padding-bottom: 5px;
+}
+
+.to-do-list-item:hover {
+  background-color: dodgerblue !important;
+}
+
+.complete-todo-item {
+  float: right;
+  right: 20px;
+}
+
+#todo-add-form {
+  animation: 1s;
+  animation-name: slidein;
+}
+
+input#todoNext:active {
+  border-bottom: 1px solid dodgerblue !important;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+  to {
+    margin-left: 1;
   }
 }
