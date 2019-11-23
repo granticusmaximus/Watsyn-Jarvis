@@ -4,6 +4,7 @@ import _ from 'lodash';
 import * as actions from '../actions';
 import ListItem from './ListItem';
 import "../../assets/css/App.css";
+import * as moment from "moment";
 
 class List extends Component {
     state = {
@@ -57,6 +58,7 @@ class List extends Component {
             <div className="container">
                 <div className="col s10 offset-s1 center-align">
                     <h4>You have no more things ToDo!</h4>
+                    <h1>{moment().format("DD - MMM - YY")}</h1>
                 </div>
             </div>
         );

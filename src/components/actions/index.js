@@ -1,4 +1,4 @@
-import {todosRef} from '../Firebase/firebase';
+import {todosRef} from '../Firebase/firebase-int';
 import {FETCH_TODOS, FETCH_NOTES} from './types';
 
 //Adding ToDo Items

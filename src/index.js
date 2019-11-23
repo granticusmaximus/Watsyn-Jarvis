@@ -9,13 +9,14 @@ import reduxThunk from 'redux-thunk';
 import reducers from './reducers';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+import Firebase, { FirebaseContext } from './components/Firebase';
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
-  <Provider store={store}>
+  <FirebaseContext.Provider value={new Firebase()}>
     <App />
-  </Provider>,
+  </FirebaseContext.Provider>,
   document.getElementById("root")
 );
 serviceWorker.register();

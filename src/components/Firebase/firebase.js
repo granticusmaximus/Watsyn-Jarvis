@@ -1,8 +1,16 @@
-import * as firebase from 'firebase'
+import app from 'firebase/app';
 
-import {FirebaseConfig} from './keys';
-firebase.initializeApp(FirebaseConfig)
-
-const databaseRef = firebase.database().ref();
-export const todosRef = databaseRef.child("todos")
-export const notesRef = databaseRef.child("notes")
+const config = {
+      apiKey: "AIzaSyC97J_aJvwG0eOcgVp0dEnmgVrHMkXQ4oc",
+      authDomain: "jarvis-5b51a.firebaseapp.com",
+      databaseURL: "https://jarvis-5b51a.firebaseio.com",
+      projectId: "jarvis-5b51a",
+      storageBucket: "jarvis-5b51a.appspot.com",
+      messagingSenderId: "57523789256",
+  };
+  class Firebase {
+    constructor() {
+      app.initializeApp(config);
+    }
+  }
+  export default Firebase;
