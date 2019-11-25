@@ -5,7 +5,6 @@ import Home from "../Home";
 import Contact from "../Contact/Contact";
 import { Button } from 'reactstrap';
 import Notes from "../Notes/Notes";
-import List from "../ToDo/List";
 
 const Navigation = () => (
     <Router>
@@ -28,18 +27,12 @@ const Navigation = () => (
                             <Button outline color="warning">Notes</Button>
                         </Link>
                     </li>
-                    <li>
-                        <Link to={"/todo"} className="nav-link">
-                            <Button outline color="warning">ToDo</Button>
-                        </Link>
-                    </li>
                 </ul>
             </div>
             <Switch>
                 <Route exact path="/index" component={Home} />
                 <Route exact path="/contact" component={Contact} />
                 <Route exact path="/notes" component={Notes} />
-                <Route exact path="/todo" component={List} />\
             </Switch>
         </div>
     </Router>
