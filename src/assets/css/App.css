@@ -24,7 +24,8 @@ body {
   background-color: #263342;
   height: auto;
   border-radius: 5px;
-  margin-left: -115px;
+  margin-left: 4px;
+  margin-top: 25px;
 }
 
 .footer {
@@ -274,7 +275,7 @@ footer ul li a:hover {
 
 .App-header {
   background-color: #263342;
-  height: 150px;
+  height: 170px;
   padding: 20px;
   color: white;
 }
