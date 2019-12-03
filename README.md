@@ -3,12 +3,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Contents:
 
 - [Intro to App](#intro-to-app)
+- [Purpose](#purpose)
 - [Tech Stack](#tech-stack)
-- [ReatJS Scripts](#available-scripts)
+- [Current Tasks](#current-tasks)
+- [Future Tasks](#future-tasks)
+- [ReatJS Scripts](#reactjs-scripts)
 - [Learn More of ReatJS](#learn-more)
 
 ## Intro to App
-_More to come in this section as requirements are filled out._
+    I am creating this application to host my entire workflow for software development. I am including the entire lifecycle of the application, from the standpoint of planning software, storing software similar to git, having a task board similar to TFS and Jira, and having a customer relations portal for current and future customers and their projects they have. 
+
+## Purpose
+    I was tired of having multiple applications running for a particular project. VS Code, Github, Trello, Excel, to manage my projects. And this project was born. To create a singular place for all work to be done outside of my IDE of choice. I wanted one singular place to host my code, as well as scaffold out my plans for what the projects will consist of in sprint planning, and I wanted a place to host my customer data.
 
 ## Tech Stack
 
@@ -16,6 +22,16 @@ _More to come in this section as requirements are filled out._
 
 - ReactJS
 - Firebase
+- Heroku _(hosting)_
+- Electron _to run the application natively on my PC_
+
+## Current Tasks
+
+- User Authentication
+- List view of saved notes 
+
+## Future Tasks
+_more to come_
 
 ### Node Packages Used:
 
@@ -23,7 +39,7 @@ _More to come in this section as requirements are filled out._
 - Reactstrap
 - Prop Types
 
-## Available Scripts
+## ReactJS Scripts
 
 In the project directory, you can run:
 
