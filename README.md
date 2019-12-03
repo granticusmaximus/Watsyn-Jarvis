@@ -25,6 +25,13 @@ I was tired of having multiple applications running for a particular project. VS
 - Heroku _(hosting)_
 - Electron _to run the application natively on my PC_
 
+### Node Packages Used:
+
+- React Router
+- Reactstrap
+- Prop Types
+- ElectronJS
+
 ## Current Tasks
 
 - User Authentication
@@ -32,12 +39,6 @@ I was tired of having multiple applications running for a particular project. VS
 
 ## Future Tasks
 _more to come_
-
-### Node Packages Used:
-
-- React Router
-- Reactstrap
-- Prop Types
 
 ## ReactJS Scripts
 
