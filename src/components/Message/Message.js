@@ -22,6 +22,7 @@ class Message extends Component {
         fire.database().ref('messages').push(this.inputEl.value);
         this.inputEl.value = ''; // <- clear the input
     }
+
     render() {
         return (
             <div className="container">
@@ -29,12 +30,14 @@ class Message extends Component {
                 <form onSubmit={this.addMessage.bind(this)}>
                     <input type="text" ref={el => this.inputEl = el} />
                     <input type="submit" />
-                    <ListGroup>
+                    
+                </form>
+                <hr/>
+                <ListGroup>
                         { /* Render the list of messages */
                             this.state.messages.map(message => <ListGroupItem tag="a" href="#" action key={message.id}>{message.text}</ListGroupItem>)
                         }
-                    </ListGroup>
-                </form>
+                </ListGroup>
             </div>
         );
     }
