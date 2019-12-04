@@ -7,8 +7,6 @@ import '../assets/css/App.css';
 import Navigation from './Navigation/Navigation';
 import fire from './Firebase/fire';
 
-const firebaseApp = firebase.initializeApp(fire);
-
 class App extends Component {
   render() {
     const {
@@ -40,7 +38,7 @@ class App extends Component {
   }
 }
 
-const firebaseAppAuth = firebaseApp.auth();
+const firebaseAppAuth = fire.auth();
 
 const providers = {
   googleProvider: new firebase.auth.GoogleAuthProvider(),

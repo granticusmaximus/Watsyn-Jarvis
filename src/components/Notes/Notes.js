@@ -27,9 +27,6 @@ class Notes extends React.Component {
         fire.database().ref('notes').push(this.typeNote.value);
         this.typeNote.value = ''; // <- clear the input
     }
-    onSubmit = () => {
-        this.props.history.push('/index')
-    }
     render() {
         return (
             <div className="container">
@@ -37,7 +34,7 @@ class Notes extends React.Component {
                 <Form onSubmit={this.addNote.bind(this)}>
                     <Input placeholder="Title of Note" type="text" ref={el => this.typeTitle = el} />
                     <br />
-                    <Input required type='textarea' maxLength='500' name='message' id='message' rows={4} placeholder='please provide note' aria-multiline='true' ref={el => this.typeNote = el} />
+                    <Input required type='textarea' maxLength='500' name='message' id='message' rows={4} placeholder='please provide note' aria-multiline='true' ref={tw => this.typeNote = tw} />
                     <br />
                     <br />
                     <input type="submit" onClick={this.onSubmit} />
