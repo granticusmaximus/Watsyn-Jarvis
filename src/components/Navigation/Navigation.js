@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Home from "../Home";
 import Contact from "../Contact/Contact";
 import { Button } from 'reactstrap';
-import Notes from "../Notes/Notes";
+import Message from "../Message/Message";
 
 
 const Navigation = () => (
@@ -24,7 +24,7 @@ const Navigation = () => (
                         </Link>
                     </li>
                     <li>
-                        <Link to={"/notes"} className="nav-link">
+                        <Link to={"/messages"} className="nav-link">
                             <Button outline color="warning">Notes</Button>
                         </Link>
                     </li>
@@ -33,7 +33,7 @@ const Navigation = () => (
             <Switch>
                 <Route exact path="/index" component={Home} />
                 <Route exact path="/contact" component={Contact} />
-                <Route exact path="/notes" component={Notes} />
+                <Route exact path="/messages" component={Message} />
             </Switch>
         </div>
     </Router>
