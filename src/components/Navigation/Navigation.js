@@ -6,6 +6,7 @@ import Contact from "../Contact/Contact";
 import { Button } from 'reactstrap';
 import Notes from "../Notes/Notes";
 
+
 const Navigation = () => (
     <Router>
         <div style={{ display: "flex" }}>
