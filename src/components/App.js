@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import withFirebaseAuth from 'react-with-firebase-auth'
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
-import firebaseConfig from './Firebase/firebaseConfig';
 import logo from '../assets/img/favicon.ico';
 import '../assets/css/App.css';
 import Navigation from './Navigation/Navigation';
+import fire from './Firebase/fire';
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(fire);
 
 class App extends Component {
   render() {
