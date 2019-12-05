@@ -1,50 +1,33 @@
 import React, { Component } from 'react';
-import withFirebaseAuth from 'react-with-firebase-auth'
-import * as firebase from 'firebase/app';
 import 'firebase/auth';
-import logo from '../assets/img/favicon.ico';
 import '../assets/css/App.css';
-import Navigation from './Navigation/Navigation';
-import fire from './Firebase/fire';
+import fire from "./Firebase/fire";
+import Page from "./auth/Page";
+import Home from './partials/Home';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: {}
+    };
+    this.authListener = this.authListener.bind(this);
+  }
+
+  componentDidMount() {
+    this.authListener();
+  }authListener = () => {
+    fire.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.setState({ user });
+      } else {
+        this.setState({ user: null });
+      }
+    });
+  };
   render() {
-    const {
-      user,
-      signOut,
-      signInWithGoogle,
-    } = this.props;
-
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          {
-            user
-              ? <p>Hello, {user.displayName}</p>
-              : <p>Please sign in.</p>
-          }
-
-          {
-            user
-              ? <button onClick={signOut}>Sign out</button>
-              : <button onClick={signInWithGoogle}>Sign in with Google</button>
-          }
-        </header>
-        <br/>
-        <Navigation />
-      </div>
-    );
+    return <div>{this.state.user ? <Home /> : <Page />}</div>;
   }
 }
 
-const firebaseAppAuth = fire.auth();
-
-const providers = {
-  googleProvider: new firebase.auth.GoogleAuthProvider(),
-};
-
-export default withFirebaseAuth({
-  providers,
-  firebaseAppAuth,
-})(App);
+export default App;

@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/css/App.css";
 
-const Home = () => (
+const MainHome = () => (
   <div className="container">
     <center><h1 className="bgf">Welcome to Jarvis.</h1></center>
     <h3>This is application is a workflow application built for engineers by engineers</h3>
@@ -9,4 +9,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default MainHome;
