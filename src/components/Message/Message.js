@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import fire from '../Firebase/fire';
-import { ListGroup, ListGroupItem } from 'reactstrap';
+import { Table } from 'reactstrap';
 
 class Message extends Component {
     constructor(props) {
@@ -15,7 +15,7 @@ class Message extends Component {
             let message = { text: snapshot.val(), id: snapshot.key };
             this.setState({ messages: [message].concat(this.state.messages) });
 
-            
+
         })
     }
     addMessage(e) {
@@ -33,16 +33,27 @@ class Message extends Component {
 
                     <h3>Note Entry</h3>
                     <input ref={el => this.inputMessage = el} />
-                    <br/>
+                    <br />
                     <input class="btn btn-success" type="submit" value="Save" />
 
                 </form>
                 <hr />
-                <ListGroup>
-                    { /* Render the list of messages */
-                        this.state.messages.map(message => <ListGroupItem tag="a" href="#" action key={message.id}>{message.text}</ListGroupItem>)
-                    }
-                </ListGroup>
+                <Table dark responsive hover>
+                    <thead>
+                        <tr>
+                            <th width="10%">Actions</th>
+                            <th width="90%">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Edit</th>
+                            { /* Render the list of messages */
+                                this.state.messages.map(message => <th scope="row">{message.text}</th>)
+                            }
+                        </tr>
+                    </tbody>
+                </Table>
             </div>
         );
     }
