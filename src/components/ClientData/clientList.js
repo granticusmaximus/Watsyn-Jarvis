@@ -3,7 +3,11 @@ import fire from '../Firebase/fire';
 
 class ClientList extends Component {
     render() {
-      return <h2>Hi, I am a Client List!</h2>;
+        return (
+            <div className="container">
+                <h4>The client list will show here</h4>
+            </div>
+        );
     }
 }
 
