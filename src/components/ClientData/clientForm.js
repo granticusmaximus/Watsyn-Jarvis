@@ -6,6 +6,8 @@ class ClientForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            clientID: {value = 0},
+            client: "",
             businessName: "",
             businessEmail: "",
             businessNumber: "",
@@ -26,6 +28,7 @@ class ClientForm extends Component {
                 const clients = Object.keys(snapshot.val()).map(key => {
                     return {
                         key: key,
+                        clientID: clientEntryFromDatabase[key].clientID,
                         businessName: clientEntryFromDatabase[key].businessName,
                         businessEmail: clientEntryFromDatabase[key].businessEmail,
                         businessNumber: clientEntryFromDatabase[key].businessNumber,
@@ -49,7 +52,8 @@ class ClientForm extends Component {
     };
 
     _saveClient = (key, title, index, e) => {
-        if (this.state.businessName === "" ||
+        if (this.state.clientID === "" ||
+            this.state.businessName === "" ||
             this.state.businessEmail === "" ||
             this.state.businessNumber === "" ||
             this.state.contactName === "" ||
@@ -73,6 +77,7 @@ class ClientForm extends Component {
                 });
 
             this.setState({
+                clientID: {value: 0},
                 businessName: "",
                 businessEmail: "",
                 businessNumber: "",
@@ -111,8 +116,9 @@ class ClientForm extends Component {
                 <Form>
                     <FormGroup>
                         <h3 for="businessName">Business Name:</h3>
+                        <input type="hidden" name="action" value="login" ref={(input) => { this.clientID.prevState.count + 1 }} />
                         <Input 
-                            type="text" 
+                            type="text"
                             name="businessName"
                             placeholder="Add Name of Business" 
                             value={this.state.businessName}
