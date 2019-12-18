@@ -29,8 +29,8 @@ const Navigation = () => (
                         </Link>
                     </li>
                     <li>
-                        <Link to={"/userentry"} className="nav-link">
-                            <Button outline color="warning">User</Button>
+                        <Link to={"/employees"} className="nav-link">
+                            <Button outline color="warning">Employees</Button>
                         </Link>
                     </li>
                 </ul>
@@ -39,7 +39,7 @@ const Navigation = () => (
                 <Route exact path="/index" component={MainHome} />
                 <Route exact path="/workboard" component={Data} />
                 <Route exact path="/clients" component={Client} />
-                <Route exact path="/userentry" component={UserIndex} />
+                <Route exact path="/employees" component={UserIndex} />
             </Switch>
         </div>
     </Router>
