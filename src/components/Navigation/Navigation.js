@@ -2,10 +2,10 @@ import "../../assets/css/App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { Button } from 'reactstrap';
-import Message from "../Message/Message";
 import Data from "../Data/Data";
 import MainHome from "../MainHome";
 import Client from "../ClientData/Client";
+import UserIndex from "../Users";
 
 
 const Navigation = () => (
@@ -24,13 +24,13 @@ const Navigation = () => (
                         </Link>
                     </li>
                     <li>
-                        <Link to={"/messages"} className="nav-link">
-                            <Button outline color="warning">Notes</Button>
+                        <Link to={"/clients"} className="nav-link">
+                            <Button outline color="warning">Client</Button>
                         </Link>
                     </li>
                     <li>
-                        <Link to={"/clients"} className="nav-link">
-                            <Button outline color="warning">Client</Button>
+                        <Link to={"/userentry"} className="nav-link">
+                            <Button outline color="warning">User</Button>
                         </Link>
                     </li>
                 </ul>
@@ -38,8 +38,8 @@ const Navigation = () => (
             <Switch>
                 <Route exact path="/index" component={MainHome} />
                 <Route exact path="/workboard" component={Data} />
-                <Route exact path="/messages" component={Message} />
                 <Route exact path="/clients" component={Client} />
+                <Route exact path="/userentry" component={UserIndex} />
             </Switch>
         </div>
     </Router>
