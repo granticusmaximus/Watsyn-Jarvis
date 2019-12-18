@@ -1,4 +1,6 @@
 import firebase from 'firebase'
+
+
 var config = {
     apiKey: "AIzaSyC97J_aJvwG0eOcgVp0dEnmgVrHMkXQ4oc",
     authDomain: "jarvis-5b51a.firebaseapp.com",
@@ -9,3 +11,4 @@ var config = {
 };
 var fire = firebase.initializeApp(config);
 export default fire;
+
