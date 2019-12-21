@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 I am creating this application to host my entire workflow for software development. I am including the entire lifecycle of the application, from the standpoint of planning software, storing software similar to git, having a task board similar to TFS and Jira, and having a customer relations portal for current and future customers and their projects they have. 
 
 ## Try Out App
-- URL: http://electrojarvis.herokuapp.com/
+- URL: https://watsyn.herokuapp.com/
 - User: test@email.com
 - Password: 123456
 
