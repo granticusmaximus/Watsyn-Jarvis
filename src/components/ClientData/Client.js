@@ -9,6 +9,16 @@ class Client extends Component {
       clients: []
     }
   }
+
+  state = { show: false };
+
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
   writeClientData = () => {
     fire.database().ref('clients').set(this.state);
     console.log('DATA SAVED');
@@ -83,14 +93,17 @@ class Client extends Component {
             {
               clients
                 .map(clients =>
-                  <div key={clients.uid} className="card float-left" style={{ width: '18rem', marginRight: '1rem' }}>
+                  <div key={clients.uid} className="card float-left" style={{ width: '550px', marginRight: '1rem' }}>
                     <div className="card-body">
                       <h5 className="card-title">{clients.businessName}</h5>
                       <p className="card-text">{clients.businessEmail}</p>
                       <p className="card-text">{clients.businessPhone}</p>
                       <p className="card-text">{clients.businessNotes}</p>
-                      <button onClick={() => this.removeData(clients)} className="btn btn-link">Delete</button>
-                      <button onClick={() => this.updateData(clients)} className="btn btn-link">Edit</button>
+                      <center>
+                        <button onClick={this.showModal} className="btn btn-link">View Client</button>{' '}
+                        <button onClick={() => this.removeData(clients)} className="btn btn-link">Delete</button>{' '}
+                        <button onClick={() => this.updateData(clients)} className="btn btn-link">Edit</button>
+                      </center>
                     </div>
                   </div>
                 )
