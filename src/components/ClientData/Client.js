@@ -10,15 +10,29 @@ class Client extends Component {
     }
   }
 
-  state = { show: false };
+  _handleEdit = () => {
+    const { editCardName, keyCard, keyList } = this.state;
+    // console.log(editCardName);
+    // console.log(keyCard);
 
-  showModal = () => {
-    this.setState({ show: true });
+    if (editCardName !== "") {
+      // console.log("You can edit");
+
+      fire
+        .database()
+        .ref("cards/")
+        .update({
+          [keyCard]: {
+            cardName: editCardName,
+            listKey: keyList
+          }
+        });
+    } else {
+      // console.log("You can't edit");
+      alert("Card cannot be empty");
+    }
   };
 
-  hideModal = () => {
-    this.setState({ show: false });
-  };
   writeClientData = () => {
     fire.database().ref('clients').set(this.state);
     console.log('DATA SAVED');
