@@ -6,7 +6,12 @@ class Client extends Component {
     super(props);
 
     this.state = {
-      clients: []
+      clients: [],
+      businessName: '',
+      businessEmail: '',
+      businessPhone: '',
+      businessNotes: '',
+      editing: false
     }
   }
 
