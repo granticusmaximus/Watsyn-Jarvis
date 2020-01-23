@@ -28,4 +28,4 @@ class ViewClient extends Component {
     }
 }
 
-export default Data;
+export default ViewClient;
